@@ -1,5 +1,7 @@
 package cn.itcast.order;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,5 +25,13 @@ public class OrderApplication {
     @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
+    }
+
+    /**
+    * 负载均衡的规则设置为随机，之前是轮询
+    */
+    @Bean
+    public IRule randomRule(){
+        return new RandomRule();
     }
 }
