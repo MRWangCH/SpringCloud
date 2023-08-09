@@ -18,7 +18,6 @@ import java.time.format.DateTimeFormatter;
 //@RefreshScope
 public class UserController {
     @Autowired
-
     private PatternProperties properties;
 
     @Autowired
@@ -27,6 +26,11 @@ public class UserController {
 //    @NacosValue("${pattern.dateformat}")
 //    private String dateformat;
 
+
+    @GetMapping("prop")
+    public PatternProperties properties(){
+        return properties;
+    }
 
     @GetMapping("now")
     public String now() {
