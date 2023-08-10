@@ -34,6 +34,7 @@ userservice:
   #      defaultZone: http://127.0.0.1:10086/eureka
 
 feign:
-  client:
-    config:
-      loggerLevel:FULL
+  httpclient:
+    enabled: true
+    max-connections: 200  #最大连接数
+    max-connections-per-route: 50 #单个连接的最大连接数
