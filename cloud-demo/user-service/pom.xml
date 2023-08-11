@@ -41,7 +41,7 @@
 <!--        nacos的配置管理依赖-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-cn.itcast.order.config</artifactId>
         </dependency>
     </dependencies>
 <!--maven镜像-->
